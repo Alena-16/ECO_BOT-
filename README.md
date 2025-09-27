@@ -1,18 +1,18 @@
 # ЭКО_бот
 ## Обработчик команды /start
-<img width="666" height="177" alt="start" src="https://github.com/user-attachments/assets/1c7463fd-1673-444e-9d8f-405fdadd7aef" />
+<img width="666" height="177" alt="start" src="https://github.com/user-attachments/assets/1c7463fd-1673-444e-9d8f-405fdadd7aef" />\
 @bot.message_handler(commands=['start', 'hello'])
 def send_welcome(message):
     bot.reply_to(message, 'Привет! Я бот ECO_ALENAbot! Напиши /help, чтобы узнать что я умею')
     
 ## Обработчик команды /help 
-<img width="407" height="188" alt="image" src="https://github.com/user-attachments/assets/43127275-d42f-456d-b116-95da07874abf" /> 
+<img width="407" height="188" alt="image" src="https://github.com/user-attachments/assets/43127275-d42f-456d-b116-95da07874abf" />\
 @bot.message_handler(commands=['help'])
 def send_welcome(message):
     bot.reply_to(message, "Привет, напиши /ECO_sovet, чтобы узнать экологичные советы; напиши /rubbish, чтобы узнать куда правильно сдавать мусор; напиши /eco_action, чтобы поучаствовать в акциях; напиши /ECOnom, чтобы получить советы, по экономии природных ресурсов; напиши /ECOcompetition, чтобы поучаствовать в конкурсе, помочь нашей планете и в конце года получить приз.") 
 
 ## Обработчик команды /ECO_sovet
-<img width="395" height="147" alt="2025-09-27_23-11-14" src="https://github.com/user-attachments/assets/ec40b2da-07bd-4b31-a370-7f687f7993e1" />
+<img width="395" height="147" alt="2025-09-27_23-11-14" src="https://github.com/user-attachments/assets/ec40b2da-07bd-4b31-a370-7f687f7993e1" />\
 def gen_sovet():
     soveti = ["Сдайте батарейки и лампочки в пункт переработки", "устройте день без автомобиля", "используйте бумажные пакеты вместо пластиковых", "посадите дерево"]
     return random.choice(soveti)
@@ -22,7 +22,7 @@ def vernut_sovet(message):
     bot.reply_to(message, back_sovet) 
 
 ## Обработчик команды /rubbish
-<img width="352" height="102" alt="image" src="https://github.com/user-attachments/assets/ba2e65d5-3fce-4e60-be91-424e6b0a5db9" />
+<img width="352" height="102" alt="image" src="https://github.com/user-attachments/assets/ba2e65d5-3fce-4e60-be91-424e6b0a5db9" />\
 def gen_fact():
     facti = ["бумагу помещайте в синие контейнеры", "пищевые отходы помещайте в коричневые контейнеры", "пластик помещайте в оранжевые контейнеры", "стекло помещайте в зелёные контейнеры", "металл сдавайте в специальные пункты приёма"]
     return random.choice(facti)
@@ -32,26 +32,26 @@ def vernut_fact(message):
     bot.reply_to(message, back_fact)
 
 ## Обработчик команды /eco_action
-<img width="408" height="222" alt="image" src="https://github.com/user-attachments/assets/d9dab672-085a-4c51-bb1c-a278e8578ca9" />
+<img width="408" height="222" alt="image" src="https://github.com/user-attachments/assets/d9dab672-085a-4c51-bb1c-a278e8578ca9" />\
 @bot.message_handler(commands=['eco_action'])
 def vernut_ssilky(message):
     bot.reply_to(message, "https://ecowiki.ru/ - это ссылка на сайт, где можно узнать о местах проведения экологических акций 🌏😘")
 
 ## Обработчик команды /ECOnom
-<img width="413" height="277" alt="image" src="https://github.com/user-attachments/assets/4bc5d8ab-95ea-4898-a120-ab16633207b1" />
+<img width="413" height="277" alt="image" src="https://github.com/user-attachments/assets/4bc5d8ab-95ea-4898-a120-ab16633207b1" />\
 @bot.message_handler(commands=['ECOnom'])
 def vernut_econom_sovet(message):
     econom_back_sovet = gen_econom_sovet()
     bot.reply_to(message, econom_back_sovet)
 
 ## Обработчик команды /ECOcompetition
-<img width="408" height="282" alt="image" src="https://github.com/user-attachments/assets/b86d8175-9786-4367-9b39-89659c3e99d3" />
+<img width="408" height="282" alt="image" src="https://github.com/user-attachments/assets/b86d8175-9786-4367-9b39-89659c3e99d3" />\
 @bot.message_handler(commands=['ECOcompetition'])
 def send_rules(message):
     bot.reply_to(message, "Участвуя в ECO-конкурсе, будешь получать баллы. Расценка баллов:\n 1 Сдал пластик в переработку (код /plastic) – 2 балла \n 2 Сдал батарейку в переработку (код /battery) – 5 баллов \n 3 В течение дня перемещался без автомобиля (код /on_foot) – 4 балла \n 4 Сортировал мусор (код /sort)  – 4 балла \n 5 Придумал вторую жизнь старой вещи (код /re_use) – 6 баллов \n 6 Поучаствовал в эко-акции (код /ECO_action) – 5 баллов \n 7 Привел друга в эко-движение(код /ECO_friend) – 10 баллов \n Хочешь посмотреть рейтинг ( код /table) \n Чтобы получить баллы, кликни на код ECO-доброго дела из перечисленных выше.")
 
 ## Обработчик команды /table
-<img width="411" height="295" alt="table" src="https://github.com/user-attachments/assets/35ce2993-9121-454a-a725-f0699819de84" />
+<img width="411" height="295" alt="table" src="https://github.com/user-attachments/assets/35ce2993-9121-454a-a725-f0699819de84" />\
 @bot.message_handler(commands=['table'])
 def ad_table(message):
     tg_id = message.from_user.id
@@ -99,7 +99,7 @@ def ad_table(message):
 
 ## Обработчик команд /plastik, battery, on_foot, sort, /re_use, /ECO_action, /ECO_friend
 ### рассмотрим на примере /plastik
-<img width="620" height="528" alt="2025-09-27_23-56-25" src="https://github.com/user-attachments/assets/37bc2ab1-1689-4329-b1dc-2a1bf7cf9ce3" />
+<img width="620" height="528" alt="2025-09-27_23-56-25" src="https://github.com/user-attachments/assets/37bc2ab1-1689-4329-b1dc-2a1bf7cf9ce3" />\
 @bot.message_handler(commands=['plastic'])
 def add_plastic(message):
     tg_id = message.from_user.id
